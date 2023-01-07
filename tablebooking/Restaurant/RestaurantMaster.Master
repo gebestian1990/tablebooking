@@ -1,0 +1,186 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="RestaurantMaster.master.cs" Inherits="tablebooking.Restaurant.RestaurantMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <style>
+        .modalBackground {
+            background-color: Gray;
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+            z-index: 10000;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="script" runat="server"></asp:ScriptManager>
+        <div class="container-scroller">
+            <!-- partial:partials/_navbar.html -->
+            <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+                <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                    <a class="navbar-brand brand-logo" href="Dashboard.aspx">
+                        <img src="assets/images/logo.png" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo-mini" href="Dashboard.aspx">
+                        <img src="assets/images/favicon.png" alt="logo" /></a>
+                </div>
+                <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                        <span class="mdi mdi-menu"></span>
+                    </button>
+
+                    <ul class="navbar-nav navbar-nav-right">
+                        <li class="nav-item d-none d-lg-block full-screen-link">
+                            <a class="nav-link">
+                                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-logout d-none d-lg-block">
+                            <a class="nav-link" href="logout.aspx">
+                                <i class="mdi mdi-power"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                        <span class="mdi mdi-menu"></span>
+                    </button>
+                </div>
+            </nav>
+            <!-- partial -->
+            <div class="container-fluid page-body-wrapper">
+                <!-- partial:partials/_sidebar.html -->
+                <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                    <ul class="nav">
+                        <li class="nav-item nav-profile">
+                            <a href="Dashboard.aspx" class="nav-link">
+                                <div class="nav-profile-image">
+                                    <img src="assets/images/face8.jpg" alt="profile">
+                                    <span class="login-status online"></span>
+                                    <!--change to offline or busy as needed-->
+                                </div>
+                                <div class="nav-profile-text d-flex flex-column">
+                                    <span class="font-weight-bold mb-2">
+                                        <asp:Label ID="lblname" runat="server"></asp:Label></span>
+                                    <%-- <span class="text-secondary text-small">
+                                        <asp:Label ID="lblrole" runat="server"></asp:Label></span>--%>
+                                </div>
+                                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Dashboard.aspx">
+                                <span class="menu-title">Dashboard</span>
+                                <i class="mdi mdi-home menu-icon"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                                <span class="menu-title">Masters</span>
+                                <i class="menu-arrow"></i>
+                                <i class="menu-icon mdi mdi-floor-plan"></i></a>
+                            <div class="collapse" id="ui-basic">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"><a class="nav-link" href="FoodCategory.aspx">Food Category</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="FoodType.aspx">Food Type</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="tablemaster.aspx">Add Tables</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+                                <span class="menu-title">Menu</span>
+                                <i class="menu-arrow"></i>
+                                <i class="menu-icon mdi mdi-card-text-outline"></i></a>
+                            <div class="collapse" id="form-elements">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"><a class="nav-link" href="AddProducts.aspx">Add Menu</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="UploadMultipleProducts.aspx">Upload Multiple Products</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="ProductList.aspx">Menu List</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+                                <span class="menu-title">Timings</span>
+                                <i class="menu-arrow"></i>
+                                <i class="menu-icon mdi mdi-chart-line"></i></a>
+                            <div class="collapse" id="charts">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"><a class="nav-link" href="Slottimings.aspx">Table Booking Timings</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="deliveryandtakewayslots.aspx">Delivery & Takeway Timings</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+                                <span class="menu-title">Reports</span>
+                                <i class="menu-arrow"></i>
+                                <i class="menu-icon mdi mdi-table"></i></a>
+                            <div class="collapse" id="tables">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"><a class="nav-link" href="Bookings.aspx">Table Booking</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="DeliveryReport.aspx">Delivery</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="TakeawayReport.aspx">Takeway</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item sidebar-actions">
+                            <span class="nav-link">
+                                <div class="mt-4">
+                                    <div class="border-bottom">
+                                        <p class="text-secondary">Settings</p>
+                                    </div>
+                                    <ul class="gradient-bullet-list mt-4">
+                                        <li><a href="Profile.aspx">My Profile</a></li>
+                                        <li><a href="Notifications.aspx">Notifications</a></li>
+                                        <li><a href="Logout.aspx">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </span>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- partial -->
+                <div class="main-panel">
+                    <asp:ContentPlaceHolder ID="body" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <!-- partial:partials/_footer.html -->
+                    <footer class="footer">
+                        <div class="container-fluid clearfix text-center">
+                            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © tablebooking.in 2021</span>
+                        </div>
+                    </footer>
+                    <!-- partial -->
+                </div>
+                <!-- main-panel ends -->
+            </div>
+            <!-- page-body-wrapper ends -->
+        </div>
+        <!-- container-scroller -->
+        <!-- plugins:js -->
+        <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+        <!-- endinject -->
+        <!-- End plugin js for this page -->
+        <!-- inject:js -->
+        <script src="assets/js/off-canvas.js"></script>
+        <script src="assets/js/hoverable-collapse.js"></script>
+        <script src="assets/js/misc.js"></script>
+        <!-- endinject -->
+        <!-- Custom js for this page -->
+        <!-- End custom js for this page -->
+        <asp:ContentPlaceHolder ID="footer" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

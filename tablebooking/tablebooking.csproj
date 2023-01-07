@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4059F6C2-4D3D-4EAE-BC37-E8DCC62CD46B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tablebooking</RootNamespace>
+    <AssemblyName>tablebooking</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\..\..\..\..\source\repos\VisionUser\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AddRestaurant.aspx" />
+    <Content Include="Admin\assets\css\loader.css" />
+    <Content Include="Admin\assets\css\style.css" />
+    <Content Include="Admin\assets\images\dashboard\circle.png" />
+    <Content Include="Admin\assets\images\dashboard\circle.svg" />
+    <Content Include="Admin\assets\images\dashboard\img_1.jpg" />
+    <Content Include="Admin\assets\images\dashboard\img_2.jpg" />
+    <Content Include="Admin\assets\images\dashboard\img_3.jpg" />
+    <Content Include="Admin\assets\images\dashboard\img_4.jpg" />
+    <Content Include="Admin\assets\images\face8.jpg" />
+    <Content Include="Admin\assets\images\faces-clipart\pic-1.png" />
+    <Content Include="Admin\assets\images\faces-clipart\pic-2.png" />
+    <Content Include="Admin\assets\images\faces-clipart\pic-3.png" />
+    <Content Include="Admin\assets\images\faces-clipart\pic-4.png" />
+    <Content Include="Admin\assets\images\faces\face1.jpg" />
+    <Content Include="Admin\assets\images\faces\face10.jpg" />
+    <Content Include="Admin\assets\images\faces\face11.jpg" />
+    <Content Include="Admin\assets\images\faces\face12.jpg" />
+    <Content Include="Admin\assets\images\faces\face13.jpg" />
+    <Content Include="Admin\assets\images\faces\face14.jpg" />
+    <Content Include="Admin\assets\images\faces\face15.jpg" />
+    <Content Include="Admin\assets\images\faces\face16.jpg" />
+    <Content Include="Admin\assets\images\faces\face17.jpg" />
+    <Content Include="Admin\assets\images\faces\face18.jpg" />
+    <Content Include="Admin\assets\images\faces\face19.jpg" />
+    <Content Include="Admin\assets\images\faces\face2.jpg" />
+    <Content Include="Admin\assets\images\faces\face20.jpg" />
+    <Content Include="Admin\assets\images\faces\face21.jpg" />
+    <Content Include="Admin\assets\images\faces\face22.jpg" />
+    <Content Include="Admin\assets\images\faces\face23.jpg" />
+    <Content Include="Admin\assets\images\faces\face24.jpg" />
+    <Content Include="Admin\assets\images\faces\face25.jpg" />
+    <Content Include="Admin\assets\images\faces\face26.jpg" />
+    <Content Include="Admin\assets\images\faces\face27.jpg" />
+    <Content Include="Admin\assets\images\faces\face3.jpg" />
+    <Content Include="Admin\assets\images\faces\face4.jpg" />
+    <Content Include="Admin\assets\images\faces\face5.jpg" />
+    <Content Include="Admin\assets\images\faces\face6.jpg" />
+    <Content Include="Admin\assets\images\faces\face7.jpg" />
+    <Content Include="Admin\assets\images\faces\face8.jpg" />
+    <Content Include="Admin\assets\images\faces\face9.jpg" />
+    <Content Include="Admin\assets\images\favicon.ico" />
+    <Content Include="Admin\assets\images\favicon.png" />
+    <Content Include="Admin\assets\images\lavistalogo.jpg" />
+    <Content Include="Admin\assets\images\loading.gif" />
+    <Content Include="Admin\assets\images\logo-mini.svg" />
+    <Content Include="Admin\assets\images\logo.png" />
+    <Content Include="Admin\assets\images\logo.svg" />
+    <Content Include="Admin\assets\images\sprites\blue.png" />
+    <Content Include="Admin\assets\images\sprites\dark.png" />
+    <Content Include="Admin\assets\images\sprites\flag.png" />
+    <Content Include="Admin\assets\images\sprites\green.png" />
+    <Content Include="Admin\assets\images\sprites\jsgrid-icons.png" />
+    <Content Include="Admin\assets\images\sprites\red.png" />
+    <Content Include="Admin\assets\images\sprites\yellow.png" />
+    <Content Include="Admin\assets\js\chart.js" />
+    <Content Include="Admin\assets\js\dashboard.js" />
+    <Content Include="Admin\assets\js\file-upload.js" />
+    <Content Include="Admin\assets\js\hoverable-collapse.js" />
+    <Content Include="Admin\assets\js\misc.js" />
+    <Content Include="Admin\assets\js\off-canvas.js" />
+    <Content Include="Admin\assets\js\todo.js" />
+    <Content Include="Admin\assets\js\todolist.js" />
+    <Content Include="Admin\assets\ring.gif" />
+    <Content Include="Admin\assets\vendors\chart.js\Chart.min.js" />
+    <Content Include="Admin\assets\vendors\css\vendor.bundle.base.css" />
+    <Content Include="Admin\assets\vendors\js\vendor.bundle.base.js" />
+    <Content Include="Admin\assets\vendors\mdi\css\materialdesignicons.min.css" />
+    <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\FoodCategory.aspx" />
+    <Content Include="Admin\FoodType.aspx" />
+    <Content Include="Admin\index.aspx" />
+    <Content Include="Admin\logout.aspx" />
+    <Content Include="Admin\Profile.aspx" />
+    <Content Include="Admin\Rights.aspx" />
+    <Content Include="Admin\Roles.aspx" />
+    <Content Include="Admin\TableBookMenu.ascx" />
+    <Content Include="Admin\Users.aspx" />
+    <Content Include="Admin\ViewRestaurant.aspx" />
+    <Content Include="css\formstyle.css" />
+    <Content Include="css\style.css" />
+    <Content Include="img\delete.png" />
+    <Content Include="index.aspx" />
+    <Content Include="js\formcode.js" />
+    <Content Include="js\formjs.js" />
+    <Content Include="js\index.js" />
+    <Content Include="Restaurant\AddProducts.aspx" />
+    <Content Include="Restaurant\assets\css\loader.css" />
+    <Content Include="Restaurant\assets\css\style.css" />
+    <Content Include="Restaurant\assets\images\dashboard\circle.png" />
+    <Content Include="Restaurant\assets\images\dashboard\circle.svg" />
+    <Content Include="Restaurant\assets\images\dashboard\img_1.jpg" />
+    <Content Include="Restaurant\assets\images\dashboard\img_2.jpg" />
+    <Content Include="Restaurant\assets\images\dashboard\img_3.jpg" />
+    <Content Include="Restaurant\assets\images\dashboard\img_4.jpg" />
+    <Content Include="Restaurant\assets\images\face8.jpg" />
+    <Content Include="Restaurant\assets\images\faces-clipart\pic-1.png" />
+    <Content Include="Restaurant\assets\images\faces-clipart\pic-2.png" />
+    <Content Include="Restaurant\assets\images\faces-clipart\pic-3.png" />
+    <Content Include="Restaurant\assets\images\faces-clipart\pic-4.png" />
+    <Content Include="Restaurant\assets\images\faces\face1.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face10.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face11.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face12.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face13.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face14.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face15.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face16.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face17.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face18.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face19.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face2.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face20.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face21.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face22.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face23.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face24.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face25.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face26.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face27.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face3.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face4.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face5.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face6.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face7.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face8.jpg" />
+    <Content Include="Restaurant\assets\images\faces\face9.jpg" />
+    <Content Include="Restaurant\assets\images\favicon.ico" />
+    <Content Include="Restaurant\assets\images\favicon.png" />
+    <Content Include="Restaurant\assets\images\lavistalogo.jpg" />
+    <Content Include="Restaurant\assets\images\loading.gif" />
+    <Content Include="Restaurant\assets\images\logo-mini.svg" />
+    <Content Include="Restaurant\assets\images\logo.png" />
+    <Content Include="Restaurant\assets\images\logo.svg" />
+    <Content Include="Restaurant\assets\images\sprites\blue.png" />
+    <Content Include="Restaurant\assets\images\sprites\dark.png" />
+    <Content Include="Restaurant\assets\images\sprites\flag.png" />
+    <Content Include="Restaurant\assets\images\sprites\green.png" />
+    <Content Include="Restaurant\assets\images\sprites\jsgrid-icons.png" />
+    <Content Include="Restaurant\assets\images\sprites\red.png" />
+    <Content Include="Restaurant\assets\images\sprites\yellow.png" />
+    <Content Include="Restaurant\assets\js\chart.js" />
+    <Content Include="Restaurant\assets\js\dashboard.js" />
+    <Content Include="Restaurant\assets\js\file-upload.js" />
+    <Content Include="Restaurant\assets\js\hoverable-collapse.js" />
+    <Content Include="Restaurant\assets\js\misc.js" />
+    <Content Include="Restaurant\assets\js\off-canvas.js" />
+    <Content Include="Restaurant\assets\js\todo.js" />
+    <Content Include="Restaurant\assets\js\todolist.js" />
+    <Content Include="Restaurant\assets\ring.gif" />
+    <Content Include="Restaurant\assets\vendors\chart.js\Chart.min.js" />
+    <Content Include="Restaurant\assets\vendors\css\vendor.bundle.base.css" />
+    <Content Include="Restaurant\assets\vendors\js\vendor.bundle.base.js" />
+    <Content Include="Restaurant\assets\vendors\mdi\css\materialdesignicons.min.css" />
+    <Content Include="Restaurant\Bookings.aspx" />
+    <Content Include="Restaurant\Dashboard.aspx" />
+    <Content Include="Restaurant\deliveryandtakewayslots.aspx" />
+    <Content Include="Restaurant\DeliveryReport.aspx" />
+    <Content Include="Restaurant\FoodCategory.aspx" />
+    <Content Include="Restaurant\FoodType.aspx" />
+    <Content Include="Restaurant\index.aspx" />
+    <Content Include="Restaurant\logout.aspx" />
+    <Content Include="Restaurant\Notifications.aspx" />
+    <Content Include="Restaurant\ProductList.aspx" />
+    <Content Include="Restaurant\Profile.aspx" />
+    <Content Include="Restaurant\Slottimings.aspx" />
+    <Content Include="Restaurant\tablemaster.aspx" />
+    <Content Include="Restaurant\TakeawayReport.aspx" />
+    <Content Include="Restaurant\UploadMultipleProducts.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AddRestaurant.aspx.cs">
+      <DependentUpon>AddRestaurant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddRestaurant.aspx.designer.cs">
+      <DependentUpon>AddRestaurant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FoodCategory.aspx.cs">
+      <DependentUpon>FoodCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FoodCategory.aspx.designer.cs">
+      <DependentUpon>FoodCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FoodType.aspx.cs">
+      <DependentUpon>FoodType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FoodType.aspx.designer.cs">
+      <DependentUpon>FoodType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NXDAdminMaster.Master.cs">
+      <DependentUpon>NXDAdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NXDAdminMaster.Master.designer.cs">
+      <DependentUpon>NXDAdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Rights.aspx.cs">
+      <DependentUpon>Rights.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Rights.aspx.designer.cs">
+      <DependentUpon>Rights.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Roles.aspx.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Roles.aspx.designer.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TableBookMenu.ascx.cs">
+      <DependentUpon>TableBookMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TableBookMenu.ascx.designer.cs">
+      <DependentUpon>TableBookMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewRestaurant.aspx.cs">
+      <DependentUpon>ViewRestaurant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewRestaurant.aspx.designer.cs">
+      <DependentUpon>ViewRestaurant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Restaurant\AddProducts.aspx.cs">
+      <DependentUpon>AddProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\AddProducts.aspx.designer.cs">
+      <DependentUpon>AddProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\Bookings.aspx.cs">
+      <DependentUpon>Bookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\Bookings.aspx.designer.cs">
+      <DependentUpon>Bookings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\deliveryandtakewayslots.aspx.cs">
+      <DependentUpon>deliveryandtakewayslots.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\deliveryandtakewayslots.aspx.designer.cs">
+      <DependentUpon>deliveryandtakewayslots.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\DeliveryReport.aspx.cs">
+      <DependentUpon>DeliveryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\DeliveryReport.aspx.designer.cs">
+      <DependentUpon>DeliveryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\FoodCategory.aspx.cs">
+      <DependentUpon>FoodCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\FoodCategory.aspx.designer.cs">
+      <DependentUpon>FoodCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\FoodType.aspx.cs">
+      <DependentUpon>FoodType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\FoodType.aspx.designer.cs">
+      <DependentUpon>FoodType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\Notifications.aspx.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\Notifications.aspx.designer.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\ProductList.aspx.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\ProductList.aspx.designer.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\RestaurantMaster.Master.cs">
+      <DependentUpon>RestaurantMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\RestaurantMaster.Master.designer.cs">
+      <DependentUpon>RestaurantMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\Slottimings.aspx.cs">
+      <DependentUpon>Slottimings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\Slottimings.aspx.designer.cs">
+      <DependentUpon>Slottimings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\tablemaster.aspx.cs">
+      <DependentUpon>tablemaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\tablemaster.aspx.designer.cs">
+      <DependentUpon>tablemaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\TakeawayReport.aspx.cs">
+      <DependentUpon>TakeawayReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\TakeawayReport.aspx.designer.cs">
+      <DependentUpon>TakeawayReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\UploadMultipleProducts.aspx.cs">
+      <DependentUpon>UploadMultipleProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\UploadMultipleProducts.aspx.designer.cs">
+      <DependentUpon>UploadMultipleProducts.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\assets\css\style.css.map" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Bold.eot" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Bold.woff" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Bold.woff2" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Light.eot" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Light.woff" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Light.woff2" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Medium.eot" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Medium.woff" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Medium.woff2" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Regular.eot" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Regular.woff" />
+    <Content Include="Admin\assets\fonts\Ubuntu\Ubuntu-Regular.woff2" />
+    <Content Include="Admin\assets\scss\components\_badges.scss" />
+    <Content Include="Admin\assets\scss\components\_bootstrap-progress.scss" />
+    <Content Include="Admin\assets\scss\components\_breadcrumbs.scss" />
+    <Content Include="Admin\assets\scss\components\_buttons.scss" />
+    <Content Include="Admin\assets\scss\components\_cards.scss" />
+    <Content Include="Admin\assets\scss\components\_checkbox-radio.scss" />
+    <Content Include="Admin\assets\scss\components\_dropdown.scss" />
+    <Content Include="Admin\assets\scss\components\_forms.scss" />
+    <Content Include="Admin\assets\scss\components\_icons.scss" />
+    <Content Include="Admin\assets\scss\components\_lists.scss" />
+    <Content Include="Admin\assets\scss\components\_preview.scss" />
+    <Content Include="Admin\assets\scss\components\_tables.scss" />
+    <Content Include="Admin\assets\scss\components\_todo-list.scss" />
+    <Content Include="Admin\assets\scss\landing-screens\_auth.scss" />
+    <Content Include="Admin\assets\scss\mixins\_animation.scss" />
+    <Content Include="Admin\assets\scss\mixins\_background.scss" />
+    <Content Include="Admin\assets\scss\mixins\_badges.scss" />
+    <Content Include="Admin\assets\scss\mixins\_blockqoute.scss" />
+    <Content Include="Admin\assets\scss\mixins\_breadcrumbs.scss" />
+    <Content Include="Admin\assets\scss\mixins\_buttons.scss" />
+    <Content Include="Admin\assets\scss\mixins\_cards.scss" />
+    <Content Include="Admin\assets\scss\mixins\_misc.scss" />
+    <Content Include="Admin\assets\scss\mixins\_pagination.scss" />
+    <Content Include="Admin\assets\scss\mixins\_popovers.scss" />
+    <Content Include="Admin\assets\scss\mixins\_text.scss" />
+    <Content Include="Admin\assets\scss\mixins\_tooltips.scss" />
+    <Content Include="Admin\assets\scss\style.scss" />
+    <Content Include="Admin\assets\scss\_dashboard.scss" />
+    <Content Include="Admin\assets\scss\_demo.scss" />
+    <Content Include="Admin\assets\scss\_fonts.scss" />
+    <Content Include="Admin\assets\scss\_footer.scss" />
+    <Content Include="Admin\assets\scss\_functions.scss" />
+    <Content Include="Admin\assets\scss\_layouts.scss" />
+    <Content Include="Admin\assets\scss\_misc.scss" />
+    <Content Include="Admin\assets\scss\_navbar.scss" />
+    <Content Include="Admin\assets\scss\_reset.scss" />
+    <Content Include="Admin\assets\scss\_sidebar.scss" />
+    <Content Include="Admin\assets\scss\_typography.scss" />
+    <Content Include="Admin\assets\scss\_utilities.scss" />
+    <Content Include="Admin\assets\scss\_variables.scss" />
+    <Content Include="Admin\assets\scss\_vertical-wrapper.scss" />
+    <Content Include="Admin\assets\scss\_widget-grid.scss" />
+    <Content Include="Admin\assets\vendors\js\bootstrap.min.js.map" />
+    <Content Include="Admin\assets\vendors\mdi\css\materialdesignicons.min.css.map" />
+    <Content Include="Admin\assets\vendors\mdi\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Admin\assets\vendors\mdi\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Admin\assets\vendors\mdi\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Admin\assets\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Admin\NXDAdminMaster.Master" />
+    <Content Include="Restaurant\assets\css\style.css.map" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Bold.eot" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Bold.woff" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Bold.woff2" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Light.eot" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Light.woff" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Light.woff2" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Medium.eot" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Medium.woff" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Medium.woff2" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Regular.eot" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Regular.woff" />
+    <Content Include="Restaurant\assets\fonts\Ubuntu\Ubuntu-Regular.woff2" />
+    <Content Include="Restaurant\assets\scss\components\_badges.scss" />
+    <Content Include="Restaurant\assets\scss\components\_bootstrap-progress.scss" />
+    <Content Include="Restaurant\assets\scss\components\_breadcrumbs.scss" />
+    <Content Include="Restaurant\assets\scss\components\_buttons.scss" />
+    <Content Include="Restaurant\assets\scss\components\_cards.scss" />
+    <Content Include="Restaurant\assets\scss\components\_checkbox-radio.scss" />
+    <Content Include="Restaurant\assets\scss\components\_dropdown.scss" />
+    <Content Include="Restaurant\assets\scss\components\_forms.scss" />
+    <Content Include="Restaurant\assets\scss\components\_icons.scss" />
+    <Content Include="Restaurant\assets\scss\components\_lists.scss" />
+    <Content Include="Restaurant\assets\scss\components\_preview.scss" />
+    <Content Include="Restaurant\assets\scss\components\_tables.scss" />
+    <Content Include="Restaurant\assets\scss\components\_todo-list.scss" />
+    <Content Include="Restaurant\assets\scss\landing-screens\_auth.scss" />
+    <Content Include="Restaurant\assets\scss\mixins\_animation.scss" />
+    <Content Include="Restaurant\assets\scss\mixins\_background.scss" />
+    <Content Include="Restaurant\assets\scss\mixins\_badges.scss" />
+    <Content Include="Restaurant\assets\scss\mixins\_blockqoute.scss" />
+    <Content Include="Restaurant\assets\scss\mixins\_breadcrumbs.scss" />
+    <Content Include="Restaurant\assets\scss\mixins\_buttons.scss" />
+    <Content Include="Restaurant\assets\scss\mixins\_cards.scss" />
+    <Content Include="Restaurant\assets\scss\mixins\_misc.scss" />
+    <Content Include="Restaurant\assets\scss\mixins\_pagination.scss" />
+    <Content Include="Restaurant\assets\scss\mixins\_popovers.scss" />
+    <Content Include="Restaurant\assets\scss\mixins\_text.scss" />
+    <Content Include="Restaurant\assets\scss\mixins\_tooltips.scss" />
+    <Content Include="Restaurant\assets\scss\style.scss" />
+    <Content Include="Restaurant\assets\scss\_dashboard.scss" />
+    <Content Include="Restaurant\assets\scss\_demo.scss" />
+    <Content Include="Restaurant\assets\scss\_fonts.scss" />
+    <Content Include="Restaurant\assets\scss\_footer.scss" />
+    <Content Include="Restaurant\assets\scss\_functions.scss" />
+    <Content Include="Restaurant\assets\scss\_layouts.scss" />
+    <Content Include="Restaurant\assets\scss\_misc.scss" />
+    <Content Include="Restaurant\assets\scss\_navbar.scss" />
+    <Content Include="Restaurant\assets\scss\_reset.scss" />
+    <Content Include="Restaurant\assets\scss\_sidebar.scss" />
+    <Content Include="Restaurant\assets\scss\_typography.scss" />
+    <Content Include="Restaurant\assets\scss\_utilities.scss" />
+    <Content Include="Restaurant\assets\scss\_variables.scss" />
+    <Content Include="Restaurant\assets\scss\_vertical-wrapper.scss" />
+    <Content Include="Restaurant\assets\scss\_widget-grid.scss" />
+    <Content Include="Restaurant\assets\vendors\js\bootstrap.min.js.map" />
+    <Content Include="Restaurant\assets\vendors\mdi\css\materialdesignicons.min.css.map" />
+    <Content Include="Restaurant\assets\vendors\mdi\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Restaurant\assets\vendors\mdi\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Restaurant\assets\vendors\mdi\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Restaurant\assets\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Restaurant\RestaurantMaster.Master" />
+    <Content Include="Restaurant\images\DishDetails.xls" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\foodtypes\" />
+    <Folder Include="fonts\" />
+    <Folder Include="Restaurant\logo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdminLogin\AdminLogin.csproj">
+      <Project>{8adccfaa-b5b4-42fa-8db2-6f5bd93d0526}</Project>
+      <Name>AdminLogin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CategoryLibrary\CategoryLibrary.csproj">
+      <Project>{6e928397-d2cc-42f7-b500-c59f081d4023}</Project>
+      <Name>CategoryLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassRoles\ClassRoles.csproj">
+      <Project>{4408a185-1da1-4871-87d5-f26e84c43d41}</Project>
+      <Name>ClassRoles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashboard\Dashboard.csproj">
+      <Project>{e291a791-a1c9-4bcf-aea4-7e7a81a84b91}</Project>
+      <Name>Dashboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KitchenDishes\KitchenDishes.csproj">
+      <Project>{b7cb3895-b2e1-4f53-9746-3d79ff173e6c}</Project>
+      <Name>KitchenDishes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManageRestaurant\ManageRestaurant.csproj">
+      <Project>{04e02514-e870-4c8e-a0c5-74a922cb390b}</Project>
+      <Name>ManageRestaurant</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestaurantSlots\RestaurantSlots.csproj">
+      <Project>{fbef40b4-5b4c-46e4-8713-04c6462bd175}</Project>
+      <Name>RestaurantSlots</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestaurantTables\RestaurantTables.csproj">
+      <Project>{a96cb86c-646b-412f-ad83-d5492d3fbcf7}</Project>
+      <Name>RestaurantTables</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserBookings\UserBookings.csproj">
+      <Project>{6d104a90-bc57-45ea-bbcd-081a121a518f}</Project>
+      <Name>UserBookings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserRights\UserRights.csproj">
+      <Project>{fc1e57a0-d6cc-45be-bea8-558e2d9fb3e9}</Project>
+      <Name>UserRights</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50034/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
